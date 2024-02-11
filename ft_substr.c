@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:14:25 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/11 16:23:29 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/11 16:48:44 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (substr);
 	if (start >= ft_strlen(s))
 		return (substr);
-	substr = (char *)malloc((1 * len) + 1);
+	substr = (char *)malloc((sizeof(char) * len) + 1);
 	if (!(substr))
 		return ((void *)0);
 	while (i < len)
