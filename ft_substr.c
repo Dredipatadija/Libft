@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:14:25 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/11 16:48:44 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/11 18:12:03 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,26 @@
 
 size_t	ft_strlen(const char *s);
 
+char	*ft_strdup(const char *s1);
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
 
-	substr = "";
 	i = 0;
-	if ((s == '\0') || (len == 0))
+	if (s == 0)
+		return (0);
+	if (ft_strlen(s) < start)
+	{
+		substr = ft_strdup("");
 		return (substr);
-	if (start >= ft_strlen(s))
-		return (substr);
-	substr = (char *)malloc((sizeof(char) * len) + 1);
+	}
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!(substr))
-		return ((void *)0);
+		return (0);
 	while (i < len)
 	{
 		substr[i] = s[start + i];
