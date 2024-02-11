@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:14:25 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/02 15:36:57 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/11 16:23:29 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	i;
 
+	substr = "";
 	i = 0;
+	if ((s == '\0') || (len == 0))
+		return (substr);
+	if (start >= ft_strlen(s))
+		return (substr);
 	substr = (char *)malloc((1 * len) + 1);
 	if (!(substr))
 		return ((void *)0);
-	while (s[start] && (i < len))
+	while (i < len)
 	{
-		substr[i] = s[start];
-		start++;
+		substr[i] = s[start + i];
 		i++;
 	}
 	substr[i] = '\0';
@@ -39,7 +43,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char const		*s = "tiene que copiar desde el 1 hasta el 4";
 	unsigned int	start = 26;
-	size_t			len = 12;
+	size_t			len = 0;
 
 	printf("%s\n", ft_substr(s, start, len));
 	return (0);
