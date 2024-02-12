@@ -6,15 +6,13 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:12:40 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/02 10:57:17 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/12 10:20:03 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <string.h>
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strrchr(const char *s, int c)
 {

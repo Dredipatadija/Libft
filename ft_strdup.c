@@ -6,15 +6,13 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:33:02 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/02 12:43:36 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/12 10:19:04 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strdup(const char *s1)
 {
