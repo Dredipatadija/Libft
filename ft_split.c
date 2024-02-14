@@ -6,16 +6,16 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 08:38:14 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/13 14:27:27 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/14 12:37:49 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+//#include <unistd.h>
+//#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_counter(char const *s, char c)
+static size_t	ft_counter(char const *s, char c)
 {
 	size_t	i;
 	size_t	number;
@@ -50,38 +50,56 @@ static size_t	ft_word_len(char const *s, size_t start, char c)
 	return (i - start);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_freestr(char **string_array, size_t n_string)
+{
+	while (n_string > 0)
+	{
+		n_string--;
+		free(string_array[n_string]);
+	}
+	free(string_array);
+	return (0);
+}
+
+static char	**ft_loopsplit(char **string_array, char const *s, char c)
 {
 	size_t	len;
 	size_t	i;
 	size_t	n_string;
-	char	**string_array;
 
 	i = 0;
 	n_string = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+		{
+			len = ft_word_len(s, i, c);
+			string_array[n_string] = ft_substr(s, i, len);
+			if (!string_array[n_string])
+				return (ft_freestr(string_array, n_string));
+			n_string++;
+			i = i + len;
+		}
+	}
+	string_array[n_string] = ((void *)0);
+	return (string_array);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**string_array;
+
 	string_array = ((void *)0);
 	string_array = (char **)malloc(sizeof(char *) * (ft_counter(s, c) + 1));
 	if (!string_array || s == 0)
 		return (0);
-	while (s[i] != '\0')
-	{
-		len = ft_word_len(s, i, c);
-		while (s[i] != '\0' && i <= len)
-		{
-			if (s[i] == c)
-			{
-				string_array[n_string] = ft_substr(s, (i - len), len);
-				n_string++;
-				i++;
-			}
-			else
-				i++;
-		}
-	}
+	string_array = ft_loopsplit(string_array, s, c);
 	return (string_array);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char const	*s;
 	char		c;
@@ -92,10 +110,10 @@ int	main(void)
 	s = "La Tierra es plana";
 	c = ' ';
 	result = ft_split(s, c);
-	while (result[i] != '\0')
+	while (result[i] != 0)
 	{
-		write(1, result[i], sizeof(char *));
+		printf("%s\n", result[i]);
 		i++;
 	}
 	return (0);
-}
+}*/
