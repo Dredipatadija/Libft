@@ -6,7 +6,7 @@
 #    By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 11:02:09 by arenilla          #+#    #+#              #
-#    Updated: 2024/02/14 14:48:56 by arenilla         ###   ########.fr        #
+#    Updated: 2024/02/15 10:26:36 by arenilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SOURCES = ft_isalpha.c ft_memcmp.c ft_strdup.c ft_strnstr.c ft_atoi.c\
 		  ft_isdigit.c ft_memmove.c ft_strlcpy.c ft_tolower.c ft_calloc.c\
 		  ft_isprint.c ft_memset.c ft_strlen.c ft_toupper.c ft_isalnum.c\
 		  ft_memchr.c ft_strchr.c ft_strncmp.c ft_substr.c ft_strjoin.c\
-		  ft_strtrim.c ft_split.c ft_itoa.c\
+		  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 
 #obj. (arch.fuente convertidos) a enlazar para crear programa, legibles x máquina parcial
 OBJECTS = $(SOURCES:.c=.o)

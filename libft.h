@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:10:50 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/14 14:48:41 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/15 10:27:40 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 
 char	*ft_itoa(int n);
+
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 
 #endif
