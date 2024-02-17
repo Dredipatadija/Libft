@@ -24,12 +24,12 @@ void	ft_putendl_fd(char *s, int fd)
 
 /*int	main(void)
 {
-	char	c;
-	int		fd;
+	char	*s;
+	int	fd;
 	
 	c = 'e';
 	fd = open("prueba_fd", O_RDWR);
-	ft_putchar_fd(c, fd);
+	ft_putchar_fd(s, fd);
 	close(fd);
 	return(0);
 }*/
