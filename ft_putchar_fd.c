@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 12:48:35 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/15 13:28:41 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/19 08:59:38 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putchar_fd(char c, int fd)
 	int		fd;
 	
 	c = 'e';
-	fd = open("prueba_fd", O_RDWR);
+	fd = open("prueba_fd_char", O_RDWR | O_CREAT, 0644);
 	ft_putchar_fd(c, fd);
 	close(fd);
 	return(0);

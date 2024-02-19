@@ -1,39 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/19 09:20:28 by arenilla          #+#    #+#             */
+/*   Updated: 2024/02/19 09:26:24 by arenilla         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //#include <fcntl.h>
 #include <unistd.h>
 #include "libft.h"
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-  char *str;
-  int  number;
-  size_t  i;
-  
-  str = NULL;
-  i = 0;
-  if (n == -2147483648)
-   ft_putstr_fd("-2147483648", fd);
-  if (n < 0)
-  {
-    ft_putchar_fd("-", fd);
-    n = n * -1;
-  }
-  if (n == 0);
-    ft_putchar_fd("0", fd);
-  number = n;
-  while (number > 9)
-  {
-    number = number / 10;
-    i++;
-  }
-  i++;
-  str[i] = '\0';
-  number = n;
-  while (number > 9 && i != 0)
-  {
-    str[i] = (number % 10) + 48;
-    number = number / 10;
-    i--;
-  }
-  str[i] = number + 48;
-  ft_putstr_fd(str, fd);
+	char	number;
+
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else
+	{
+		if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			n = -n;
+		}
+		if (n > 9)
+			ft_putnbr_fd(n / 10, fd);
+		number = (n % 10) + 48;
+		ft_putchar_fd(number, fd);
+	}
 }
+
+/*int	main(void)
+{
+	int	n;
+	int	fd;
+	
+	n = -4562;
+	fd = open("prueba_fd_nbr", O_RDWR | O_CREAT, 0644);
+	ft_putnbr_fd(n, fd);
+	close(fd);
+	return(0);
+}*/
