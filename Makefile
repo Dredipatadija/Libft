@@ -6,7 +6,7 @@
 #    By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 11:02:09 by arenilla          #+#    #+#              #
-#    Updated: 2024/02/19 08:20:29 by arenilla         ###   ########.fr        #
+#    Updated: 2024/02/19 11:20:30 by arenilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,12 @@ SOURCES = ft_isalpha.c ft_memcmp.c ft_strdup.c ft_strnstr.c ft_atoi.c\
 		  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
+SOURCES_BONUS = ft_lstnew.c
+
 #obj. (arch.fuente convertidos) a enlazar para crear programa, legibles x máquina parcial
 OBJECTS = $(SOURCES:.c=.o)
+
+OBJECTS_BONUS = $(SOURCES_BONUS:.c=.o)
 
 #regla que permite ejecutar make sin argumentos, representa el objetivo principal del makefile
 all: $(NAME)
@@ -37,6 +41,10 @@ all: $(NAME)
 #ejecuto el comando ar con extensiones -c, -r y -s para crear el archivo NAME (librería) a partir de los OBJECTS (archivos fuente .o)
 $(NAME): $(OBJECTS)
 		ar -crs $(NAME) $(OBJECTS)
+
+#regla bonus para hacer make bonus SOLO con los bonus
+bonus: $(OBJECTS_BONUS)
+		ar -crs $(NAME) $(OBJECTS_BONUS)
 
 #limpio archivos .o, para dejar solo archivos fuente .c
 clean:
