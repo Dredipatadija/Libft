@@ -28,7 +28,7 @@ SOURCES = ft_isalpha.c ft_memcmp.c ft_strdup.c ft_strnstr.c ft_atoi.c\
 		  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
-SOURCES_BONUS = ft_lstnew.c ft_lstadd_front.c
+SOURCES_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 
 #obj. (arch.fuente convertidos) a enlazar para crear programa, legibles x máquina parcial
 OBJECTS = $(SOURCES:.c=.o)
