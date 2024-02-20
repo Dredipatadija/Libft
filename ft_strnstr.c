@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 21:05:57 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/02 11:49:29 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/20 09:55:25 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,17 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 	j = 0;
 	if (needle[j] == '\0')
 		return ((char *) &str[i]);
-	while ((i < len) && str[i] && needle[j])
+	while ((i < len) && str[i] && needle[j] && (i + j) < len)
 	{
-		if (needle[j] == str[i])
+		if (needle[j] == str[i + j])
+			j++;
+		else
 		{
-			if (needle[j + 1] == '\0')
-				return ((char *) &str[i - j]);
-			if (needle[j + 1] == str[i + 1])
-				j++;
+			j = 0;
+			i++;
 		}
-		i++;
+		if (needle[j] == '\0')
+			return ((char *) &str[i]);
 	}
 	return ((void *) 0);
 }
