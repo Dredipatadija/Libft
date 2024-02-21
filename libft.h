@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:10:50 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/21 10:17:21 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:26:45 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 
 void	ft_lstadd_back(t_list **lst, t_list *new);
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif

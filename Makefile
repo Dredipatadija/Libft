@@ -6,7 +6,7 @@
 #    By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 11:02:09 by arenilla          #+#    #+#              #
-#    Updated: 2024/02/21 10:18:22 by arenilla         ###   ########.fr        #
+#    Updated: 2024/02/21 13:27:13 by arenilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SOURCES = ft_isalpha.c ft_memcmp.c ft_strdup.c ft_strnstr.c ft_atoi.c\
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
 SOURCES_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
-				ft_lstlast_bonus.c ft_lstadd_back_bonus.c
+				ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
 
 #obj. (arch.fuente convertidos) a enlazar para crear programa, legibles x máquina parcial
 OBJECTS = $(SOURCES:.c=.o)
