@@ -6,11 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:25:00 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/02 11:00:31 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 11:37:39 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -30,16 +30,20 @@ void	*ft_calloc(size_t count, size_t size)
 	return ((void *) array);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	size_t	count;
 	size_t	size;
+	char	*array;
 
+	array = "hola";
 	count = 5;
-	size = sizeof(int);
-
-	printf("original: %hhu\n", (unsigned char)calloc(count, size));
-	printf("propia: %hhu\n", (unsigned char)ft_calloc(count, size));
-
+	size = sizeof(char);
+//	array = calloc(count, (size + 1));
+	array = ft_calloc(count, (size + 1));
+	if (array)
+		printf("bien");
+	if (!array)
+		printf ("mal");
 	return (0);
-}*/
+}

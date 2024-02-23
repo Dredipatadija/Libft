@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:52:13 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/21 11:32:38 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 10:37:44 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (character == '\0')
 		return ((char *)(&s[i]));
-	return ((void *)0);
+	return (0);
 }
 
 /*int	main(void)

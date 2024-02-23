@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 17:13:55 by arenilla          #+#    #+#             */
-/*   Updated: 2024/01/31 14:34:27 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 10:46:03 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		else
 			i++;
 	}
-	return ((void *) 0);
+	return (0);
 }
 
 /*int	main(void)

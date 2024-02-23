@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 21:05:57 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 07:45:13 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 11:00:33 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (needle[j] == '\0')
 			return ((char *) &haystack[i]);
 	}
-	return ((void *) 0);
+	return (0);
 }
 
 /*int	main(void)
