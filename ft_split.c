@@ -6,13 +6,12 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 08:38:14 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/14 12:37:49 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:19:19 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <unistd.h>
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	ft_counter(char const *s, char c)

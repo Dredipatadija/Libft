@@ -6,14 +6,14 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 09:47:34 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/22 12:46:42 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 07:20:20 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
-static void del(void *lst)
+/*static void del(void *lst)
 {
 	free(lst);
 }
@@ -34,7 +34,7 @@ static void	*function_toup(void *str)
 		i++;
 	}
 	return (s);
-}
+}*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -62,7 +62,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (firstcpy);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	t_list	*no1;
 	t_list	*no2;
@@ -92,4 +92,4 @@ int	main(void)
 		lstcpy = lstcpy->next;
 	}
 	return (0);
-}
+}*/

@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:14:19 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/12 10:19:26 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:20:30 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

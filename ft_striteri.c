@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 11:43:46 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/15 12:40:52 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:20:02 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-//#include <stdlib.h>
 #include "libft.h"
 
 /*static void ft_addi(unsigned int i, char *c)

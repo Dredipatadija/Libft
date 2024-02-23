@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 10:50:15 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/19 11:10:19 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:16:52 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

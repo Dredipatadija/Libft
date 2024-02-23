@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:14:25 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/12 10:16:27 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:22:02 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

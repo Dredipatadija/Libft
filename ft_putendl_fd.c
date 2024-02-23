@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:19:27 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/19 09:25:14 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:18:36 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <fcntl.h>
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

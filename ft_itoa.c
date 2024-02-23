@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 12:45:19 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/14 15:46:51 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:13:34 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_number(int n)

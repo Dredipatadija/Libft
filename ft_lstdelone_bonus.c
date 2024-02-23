@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 12:49:37 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/22 09:05:47 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:15:16 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 /*static void del(void *lst)

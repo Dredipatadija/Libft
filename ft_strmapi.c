@@ -6,12 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 09:09:16 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/15 10:47:58 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 08:21:05 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 /*static char	ft_2toupper(unsigned int i, char c)
