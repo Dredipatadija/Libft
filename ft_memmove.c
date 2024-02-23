@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:57:53 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/02 12:29:26 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/23 09:58:08 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	bytesrc = src;
 	i = 0;
 	if (dst == '\0' && src == '\0')
-		return ((void *)0);
+		return (0);
 	while (i < len)
 	{
 		if (dst >= src)
