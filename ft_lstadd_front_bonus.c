@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:56:28 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 12:59:08 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:03:26 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!new || !lst)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

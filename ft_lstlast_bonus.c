@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 10:53:10 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/21 10:53:13 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:10:13 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return ((void *)0);
+		return (0);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);
@@ -34,6 +34,7 @@ t_list	*ft_lstlast(t_list *lst)
 	node1->next = node2;
 	node2->next = node3;
 	node3->next = NULL;
-	printf("%s\n", ft_lstlast(node1)->content);
+	printf("antes: %s\n",(node1->content));
+	printf("despues: %s\n", ft_lstlast(node1)->content);
 	return 0;
 }*/
