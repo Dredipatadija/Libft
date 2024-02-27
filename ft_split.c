@@ -6,11 +6,10 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 08:38:14 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:19:19 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:00:10 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
 //#include <stdio.h>
 #include "libft.h"
 
@@ -23,14 +22,14 @@ static size_t	ft_counter(char const *s, char c)
 	number = 0;
 	if (s == 0)
 		return (0);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 			i++;
 		else
 		{
 			number++;
-			while (s[i] && s[i] != c)
+			while (s[i] != '\0' && s[i] != c)
 				i++;
 		}
 	}
@@ -90,6 +89,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**string_array;
 
+	if (!s)
+		return ((void *)0);
 	string_array = ((void *)0);
 	string_array = (char **)malloc(sizeof(char *) * (ft_counter(s, c) + 1));
 	if (!string_array || s == 0)
@@ -100,15 +101,16 @@ char	**ft_split(char const *s, char c)
 
 /*int	main(void)
 {
-	char const	*s;
+	char const	*s = NULL;
 	char		c;
 	char		**result;
 	size_t		i;
 
 	i = 0;
-	s = "La Tierra es plana";
 	c = ' ';
 	result = ft_split(s, c);
+	if (!s)
+		printf("%s\n",(char *)ft_split(s, c));
 	while (result[i] != 0)
 	{
 		printf("%s\n", result[i]);
