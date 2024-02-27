@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:25:00 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 07:47:04 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 07:49:18 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (0);
 	array = malloc(count * size);
 	if (!array)
-		return ((void *) 0);
+		return (0);
 	i = 0;
 	while (i < (count * size))
 	{
