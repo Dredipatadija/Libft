@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:18:33 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:19:03 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 12:37:44 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
-	if (s != 0)
+	if (!s)
+		return ;
+	while (s[i] != '\0')
 	{
-		while (s[i] != '\0')
-		{
-			write(fd, &s[i], sizeof(char));
-			i++;
-		}
+		write(fd, &s[i], sizeof(char));
+		i++;
 	}
 }
 

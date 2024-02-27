@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 09:19:27 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:18:36 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 12:39:24 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s != 0)
-	{
-		ft_putstr_fd(s, fd);
-		write(fd, "\n", 1);
-	}
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
 
 /*int	main(void)
