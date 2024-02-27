@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:24:21 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 09:43:20 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 10:34:47 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	if (!set)
 		return ((char *)s1);
-	while (s1[i] && (ft_strchr(set, s1[i])))
+	while (s1[i] != '\0' && (ft_strchr(set, s1[i])))
 		i++;
 	len = ft_strlen(s1 + i);
 	if (len)
 	{
-		while (s1[i + len - 1] && (ft_strchr(set, s1[i + len - 1])))
+		while (s1[i + len - 1] != '\0' && (ft_strchr(set, s1[i + len - 1])))
 			len--;
 	}
 	str = (char *)malloc(sizeof(char) * (len + 1));
