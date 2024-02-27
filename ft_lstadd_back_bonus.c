@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 10:50:36 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/21 11:19:01 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:24:05 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*lastnode;
 
-	if (*lst == 0 || new == 0)
+	if (!new)
+		return ;
+	if (!*lst)
 	{
 		*lst = new;
 		return ;
