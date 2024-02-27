@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 10:50:15 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:16:52 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 12:55:15 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ t_list	*ft_lstnew(void *content)
 
 	node = (t_list *)malloc(sizeof(t_list));
 	if (!node)
-		return ((void *)0);
+		return (0);
 	node->content = content;
-	node->next = (void *)0;
+	node->next = 0;
 	return (node);
 }
 
