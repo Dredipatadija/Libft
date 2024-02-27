@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:33:02 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/12 10:19:04 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 08:00:22 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(const char *s1)
 	size = ft_strlen(s1);
 	scpy = (char *) malloc(size + 1);
 	if (!scpy)
-		return ((void *) 0);
+		return (0);
 	j = 0;
 	while (s1[j])
 	{
@@ -38,8 +38,8 @@ char	*ft_strdup(const char *s1)
 {
 	const char	*s1;
 
-	s1 = "Hola, caracola";
-	printf("original: %d\n", srtdup(s1));
+	s1 = "";
+	printf("original: %s\n", strdup(s1));
 	printf("propia: %s\n", ft_strdup(s1));
 	return (0);
 }*/
