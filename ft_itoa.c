@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 12:45:19 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:13:34 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:09:14 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,6 @@ char	*ft_itoa(int n)
 
 /*int	main(void)
 {
-	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(23465));
 	return (0);
 }*/

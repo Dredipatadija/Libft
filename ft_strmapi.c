@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 09:09:16 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:21:05 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 11:18:45 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len_i;
 	char	*str;
 
-	len_i = ft_strlen(s);
-	if (s == 0 || !f)
+	if (!s)
 		return (0);
+	if (!f)
+		return ((char *)s);
+	if (*s == 0)
+	{
+		str = ft_strdup(s);
+		return (str);
+	}
+	len_i = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * (len_i + 1));
 	if (!str)
 		return (0);
@@ -48,7 +55,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char const	*s;
 
-	s = "hola, que hay?";
+	s = NULL;
 	printf("%s\n", ft_strmapi(s, ft_2toupper));
 	return (0);
 }*/
