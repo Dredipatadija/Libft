@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:24:21 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 08:21:48 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/27 09:43:20 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	i = 0;
-	if (s1 == 0 || set == 0)
+	if (!s1)
 		return (0);
+	if (!set)
+		return ((char *)s1);
 	while (s1[i] && (ft_strchr(set, s1[i])))
 		i++;
 	len = ft_strlen(s1 + i);

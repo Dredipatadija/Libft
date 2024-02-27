@@ -6,7 +6,7 @@
 #    By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 11:02:09 by arenilla          #+#    #+#              #
-#    Updated: 2024/02/22 11:05:01 by arenilla         ###   ########.fr        #
+#    Updated: 2024/02/27 10:21:41 by arenilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ bonus: $(OBJECTS_BONUS)
 
 #limpio archivos .o, para dejar solo archivos fuente .c
 clean:
-		rm -f $(OBJECTS)
+		rm -f $(OBJECTS) $(OBJECTS_BONUS)
 
 #limpio el programa .a y los .o con el clean
 fclean: clean
