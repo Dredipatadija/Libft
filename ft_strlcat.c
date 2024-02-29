@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:23:11 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/29 10:24:15 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 11:08:07 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 /*int	main(void)
 {
-	char		dst[0];
+	char		*dst = NULL;
 	const char	*src = ", tu";
 	size_t		dstsize;
 
-	dstsize = -1;
-	printf ("original: %lu\n", strlcat(dst, src, dstsize));
-//	printf ("propia: %lu\n", ft_strlcat(dst, src, dstsize));
+	dstsize = 0;
+//	printf ("original: %lu\n", strlcat(dst, src, dstsize));
+	printf ("propia: %lu\n", ft_strlcat(dst, src, dstsize));
+	printf ("%s\n", dst);
 	return (0);
 }*/
