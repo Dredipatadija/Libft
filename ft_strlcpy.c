@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:08:49 by arenilla          #+#    #+#             */
-/*   Updated: 2024/01/31 17:04:47 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 11:26:40 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize != 0)
-		dst[i] = '\0';
+	dst[i] = '\0';
 	while (src[i] != '\0')
 	{
 		i++;

@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:23:11 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/29 11:08:07 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:55:50 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize <= dstlen)
 		return (srclen + dstsize);
-	while (src[i] && ((dstlen + 1) < dstsize))
+	while (src[i] != '\0' && ((dstlen + 1) < dstsize))
 	{
 		dst[dstlen] = src[i];
 		i++;
