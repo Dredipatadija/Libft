@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 07:31:00 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/22 08:56:39 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 09:19:02 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 	if (!lst || !f)
 		return ;
-	while (lst != 0)
+	while (lst)
 	{
 		next_node = lst->next;
 		f(lst->content);
