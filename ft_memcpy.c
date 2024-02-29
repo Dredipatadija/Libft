@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:14:04 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 09:56:14 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:58:34 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	bytedst = dst;
 	bytesrc = src;
 	i = 0;
-	if (dst == '\0' && src == '\0')
+	if (!dst && !src)
 		return (0);
 	while (i < n)
 	{
