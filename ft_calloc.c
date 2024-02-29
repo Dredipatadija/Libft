@@ -43,8 +43,10 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_array = "hola";
 	count = 5;
 	size = sizeof(char);
-	array = calloc(SIZE_MAX, SIZE_MAX);
-	ft_array = ft_calloc(SIZE_MAX, SIZE_MAX);
+	array = calloc(count, size);
+	ft_array = ft_calloc(count, size);
 	printf("%p	%p\n", array, ft_array);
+	free(array);
+	free(ft_array);
 	return (0);
 }*/
