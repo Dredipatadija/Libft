@@ -6,17 +6,17 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 12:49:37 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 14:22:55 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 08:28:24 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
-static void ft_del(void *lst)
+/*static void ft_del(void *lst)
 {
 	free(lst);
-}
+}*/
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
@@ -27,15 +27,15 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	lst = 0;
 }
 
-int	main(void)
+/*int	main(void)
 {
 	t_list	*node;
 
 	node = ft_lstnew(ft_strdup("hola"));
-	printf("antes contenido: %s\n", node->content);
-	printf("antes nodo: %p\n", *node);
-	ft_lstdelone(node, &ft_del);
-	printf("despues contenido: %s\n", node->content);
-	printf("despues nodo: %p\n", *node);
+	printf("antes: %s\n", node->content);
+	printf("%p\n",(void *)node);
+	ft_lstdelone(node, ft_del);
+	printf("despues: %s\n", node->content);
+	printf("%p\n", (void *)node);
 	return (0);
-}
+}*/
