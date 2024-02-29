@@ -45,7 +45,7 @@ static char	*ft_loopitoa(char *str, int n, size_t len, int number)
 {
 	if (n < 0)
 		str[0] = '-';
-	while ((n < 0 && len >= 1) || (n > 0 && len >= 0))
+	while ((n < 0 && len >= 1) || (n > 0))
 	{
 		if (number > 9)
 		{
