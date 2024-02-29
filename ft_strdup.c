@@ -37,9 +37,15 @@ char	*ft_strdup(const char *s1)
 /*int	main(void)
 {
 	const char	*s1;
+	char		*scpy_mine;
+	char		*scpy_original;
 
-	s1 = "";
-	printf("original: %s\n", strdup(s1));
-	printf("propia: %s\n", ft_strdup(s1));
+	s1 = "hola";
+	scpy_mine = ft_strdup(s1);
+	scpy_original = strdup(s1);
+	printf("original: %s\n", scpy_original);
+	printf("propia: %s\n", scpy_mine);
+	free(scpy_original);
+	free(scpy_mine);
 	return (0);
 }*/
