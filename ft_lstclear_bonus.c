@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 13:57:48 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/29 09:18:16 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 09:55:34 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*first_node;
 	t_list	*temporal_node;
 
-	first_node = *lst;
 	if (!*lst || !del)
 		return ;
+	first_node = *lst;
 	while (first_node)
 	{
 		temporal_node = first_node->next;
