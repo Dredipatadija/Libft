@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 11:43:46 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 12:24:36 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 10:26:26 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_striteri(char *s, void (*f) (unsigned int, char*))
 	size_t	i;
 
 	i = 0;
-	if (!s || !s || *s == 0)
+	if (!s || *s == 0)
 		return ;
 	while (s[i] != '\0')
 	{
