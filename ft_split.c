@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 08:38:14 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 11:00:10 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 13:46:04 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ static size_t	ft_counter(char const *s, char c)
 
 	i = 0;
 	number = 0;
-	if (s == 0)
-		return (0);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
@@ -41,8 +39,6 @@ static size_t	ft_word_len(char const *s, size_t start, char c)
 	size_t	i;
 
 	i = start;
-	if (s == 0)
-		return (0);
 	while (s[i] != '\0' && s[i] != c)
 		i++;
 	return (i - start);
@@ -93,7 +89,7 @@ char	**ft_split(char const *s, char c)
 		return ((void *)0);
 	string_array = ((void *)0);
 	string_array = (char **)malloc(sizeof(char *) * (ft_counter(s, c) + 1));
-	if (!string_array || s == 0)
+	if (!string_array)
 		return (0);
 	string_array = ft_loopsplit(string_array, s, c);
 	return (string_array);

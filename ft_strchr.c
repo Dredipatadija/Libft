@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:52:13 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/23 10:37:44 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/02/29 13:00:09 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 
 	character = c;
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (character == s[i])
 			return ((char *)(&s[i]));
