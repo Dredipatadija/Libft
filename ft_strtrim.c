@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (s1[i + len - 1] > -1 && (ft_strchr(set, s1[i + len - 1])))
 			len--;
 	}
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (0);
 	str = ft_memcpy(str, (s1 + i), len);
