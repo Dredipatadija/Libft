@@ -25,7 +25,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len_i;
+	size_t	i;
 	char	*str;
 
 	if (!s)
@@ -37,17 +37,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str = ft_strdup(s);
 		return (str);
 	}
-	len_i = ft_strlen(s);
-	str = (char *)malloc(sizeof(char) * (len_i + 1));
+	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!str)
 		return (0);
-	len_i = 0;
-	while (s[len_i] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		str[len_i] = f(len_i, s[len_i]);
-		len_i++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	str[len_i] = '\0';
+	str[i] = '\0';
 	return (str);
 }
 
