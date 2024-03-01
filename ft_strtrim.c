@@ -27,9 +27,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] != '\0' && (ft_strchr(set, s1[i])))
 		i++;
 	len = ft_strlen(s1 + i);
-	if (len)
+	if (len != 0)
 	{
-		while (s1[i + len - 1] != '\0' && (ft_strchr(set, s1[i + len - 1])))
+		while (s1[i + len - 1] > -1 && (ft_strchr(set, s1[i + len - 1])))
 			len--;
 	}
 	str = (char *)malloc(sizeof(char) * (len + 1));
