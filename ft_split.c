@@ -87,7 +87,6 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return ((void *)0);
-	string_array = ((void *)0);
 	string_array = (char **)malloc(sizeof(char *) * (ft_counter(s, c) + 1));
 	if (!string_array)
 		return (0);
