@@ -31,7 +31,7 @@ size_t	ft_strlen(const char *s)
 	const char	*s;
 
 	s = "k l";
-	printf("original: %lu\n", strlen(s));
-	printf("propia: %lu\n", ft_strlen(s));
+	printf("original: %zu\n", strlen(s));
+	printf("propia: %zu\n", ft_strlen(s));
 	return (0);
 }*/
