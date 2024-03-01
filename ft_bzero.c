@@ -35,15 +35,25 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	s[4];
 	size_t	n;
+	size_t	i;
 
 	s[0] = 'H';
 	s[1] = 'o';
 	s[2] = 'l';
 	s[3] = 'a';
-	n = 0;
+	n = 2;
+	i = 0;
 	bzero(s, n);
-	printf("%s\n", s);
 	ft_bzero(s, n);
-	printf("%s\n", s);
+	while (s[i] == '\0')
+	{
+		printf("%zu", i + 1);
+		i++;
+	}
+	while (s[i] != '\0')
+	{
+		printf("%c", s[i]);
+		i++;
+	}
 	return (0);
 }*/
