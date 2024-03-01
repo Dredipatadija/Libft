@@ -30,7 +30,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		bytedst[i] = bytesrc[i];
 		i++;
 	}
-	dst = bytedst;
 	return (dst);
 }
 
