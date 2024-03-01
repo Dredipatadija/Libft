@@ -21,13 +21,10 @@ void	ft_bzero(void *s, size_t n)
 
 	bytestr = s;
 	i = 0;
-	if (n != 0)
+	while (i < n)
 	{
-		while (i < n)
-		{
-			bytestr[i] = 0;
-			i++;
-		}
+		bytestr[i] = 0;
+		i++;
 	}
 }
 
