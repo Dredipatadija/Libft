@@ -13,7 +13,12 @@
 //#include <stdio.h>
 #include "libft.h"
 
-/*static void	function_toup(void *str)
+/*static void del(void *lst)
+{
+	free(lst);
+}
+
+static void	function_toup(void *str)
 {
 	size_t	i;
 	char	*s;
@@ -30,13 +35,10 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-//	t_list	*next_node;
-
 	if (!lst || !f)
 		return ;
 	while (lst)
 	{
-//		next_node = lst->next;
 		f(lst->content);
 		lst = lst->next;
 	}
@@ -47,26 +49,22 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	t_list	*no1;
 	t_list	*no2;
 	t_list	*no3;
-	t_list	*no4;
 
 	no1 = ft_lstnew(ft_strdup("uno"));
 	no2 = ft_lstnew(ft_strdup("dos"));
 	no3 = ft_lstnew(ft_strdup("tres"));
-	no4 = ft_lstnew(ft_strdup("cuatro"));
 	no1->next = no2;
 	no2->next = no3;
-	no3->next = no4;
-	no4->next = 0;
-	printf("antes");
-	printf("%s\n", no1->content);
-	printf("%s\n", no2->content);
-	printf("%s\n", no3->content);
-	printf("%s\n", no4->content);
+	no3->next = 0;
+	printf("antes:\n");
+	printf("%s ", (char *)no1->content);
+	printf("%s ", (char *)no2->content);
+	printf("%s ", (char *)no3->content);
 	ft_lstiter(no1, function_toup);
-	printf("después");
-	printf("%s\n", no1->content);
-	printf("%s\n", no2->content);
-	printf("%s\n", no3->content);
-	printf("%s\n", no4->content);
+	printf("\ndespués:\n");
+	printf("%s ", (char *)no1->content);
+	printf("%s ", (char *)no2->content);
+	printf("%s ", (char *)no3->content);
+	ft_lstclear(&no1, del);
 	return (0);
 }*/
