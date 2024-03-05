@@ -38,23 +38,20 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 /*int	main(void)
 {
-	t_list	**lst;
 	t_list	*no1;
 	t_list	*no2;
 	t_list	*no3;
+	t_list	**lst;
 
-	no1 = ft_lstnew("1");
-	no2 = ft_lstnew("dos");
-	no3 = ft_lstnew("3");
+	no1 = ft_lstnew(ft_strdup("uno"));
+	no2 = ft_lstnew(ft_strdup("dos"));
+	no3 = ft_lstnew(ft_strdup("tres"));
 	no1->next = no2;
 	no2->next = no3;
 	no3->next = NULL;
 	lst = &no1;
-	no1->content = (char *)malloc(sizeof(char) * ft_strlen(no1->content) + 1);
-	no2->content = (char *)malloc(sizeof(char) * ft_strlen(no2->content) + 1);
-	no3->content = (char *)malloc(sizeof(char) * ft_strlen(no3->content) + 1);
 	ft_lstclear(lst, del);
 	if (*lst == NULL)
-		printf("lista vacía");
+		printf("lista vacía, éxito");
 	return (0);
 }*/
