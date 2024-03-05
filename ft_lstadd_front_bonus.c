@@ -6,17 +6,12 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:56:28 by arenilla          #+#    #+#             */
-/*   Updated: 2024/03/05 12:57:01 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/05 13:45:39 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 #include "libft.h"
-
-/*static void del(void *str)
-{
-	free(str);
-}*/
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
@@ -26,7 +21,13 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
-/*int	main(void)
+/*static void del(void *str)
+{
+	free(str);
+}
+
+
+int	main(void)
 {
 	t_list	*node;
 	t_list	*new;

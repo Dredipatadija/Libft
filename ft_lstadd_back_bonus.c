@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 10:50:36 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 13:24:05 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/05 14:23:24 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,26 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	lastnode = ft_lstlast(*lst);
 	lastnode->next = new;
 }
-/*int	main(void)
+
+/*static void del(void *lst)
 {
-	t_list	*node;
+	free(lst);
+}
+
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
 	t_list	*new;
 
-	node = ft_lstnew("viejo nodo");
-	new = ft_lstnew("nuevo y primer nodo ya colocado");
-	printf("antes: %s\n", node->content);
-	ft_lstadd_back(&node, new);
-	printf("después: %s\n", node->content);
-	printf("después: %s\n", node->next->content);
+	node1 = ft_lstnew(ft_strdup("nodo"));
+	node2 = ft_lstnew(ft_strdup("ultimo nodo vejo"));
+	node1->next = node2;
+	node2->next = NULL;
+	new = ft_lstnew(ft_strdup("nuevo ultimo nodo, exito"));
+	printf("antes: %s\n", ft_lstlast(node1)->content);
+	ft_lstadd_back(&node1, new);
+	printf("después: %s\n", ft_lstlast(node1)->content);
+	ft_lstclear(&node1, del);
 	return (0);
 }*/
