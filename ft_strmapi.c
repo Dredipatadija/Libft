@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 09:09:16 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 11:18:45 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:19:11 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 /*int	main(void)
 {
-	char const	*s;
+	char	*str;
 
-	s = NULL;
-	printf("%s\n", ft_strmapi(s, ft_2toupper));
+	str = ft_strmapi("hola", ft_2toupper);
+	printf("%s\n", str);
+	free(str);
 	return (0);
 }*/
