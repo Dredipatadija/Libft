@@ -6,11 +6,11 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 09:14:19 by arenilla          #+#    #+#             */
-/*   Updated: 2024/03/05 10:54:39 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/05 10:58:19 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -42,7 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char const	*s1;
 	char const	*s2;
@@ -54,4 +54,4 @@ int	main(void)
 	printf("%s\n", joined);
 	free(joined);
 	return (0);
-}
+}*/
