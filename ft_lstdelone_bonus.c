@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
-static void del(void *lst)
+/*static void del(void *lst)
 {
 	free(lst);
-}
+}*/
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
@@ -27,19 +27,18 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	lst = NULL;
 }
 
-int	main(void)
+/*int	main(void)
 {
-	t_list	*node1;
-	t_list	*node2;
-	t_list	*node3;
+	t_list	*node;
+	t_list	**lst;
 	
-	node1 = ft_lstnew(ft_strdup("Hola"));
-	node2 = ft_lstnew(ft_strdup("borrado"));
-	node3 = ft_lstnew(ft_strdup("ultimo nodo, borrame"));
-	node1->next = node2;
-	node2->next = node3;
-	node3->next = NULL;
-	printf("sin borrar el ultimo nodo: %d\n", ft_lstsize(node1));
-	ft_lstdelone(node3, del);
-	printf("ultimo nodo borrado: %d\n", ft_lstsize(node1));
-}
+	node = ft_lstnew(ft_strdup("Hola"));
+	node->next = NULL;
+	lst = &node;
+	printf("contenido del nodo antes: %s\n", (char *)node->content);
+	ft_lstdelone(*lst, del);
+	printf("contenido después: %s\n", (char *)node->content);
+	if (*lst == NULL)
+		printf("éxito, nodo borrado");
+	return (0);
+}*/
