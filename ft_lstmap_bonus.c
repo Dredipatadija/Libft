@@ -21,7 +21,7 @@
 static void	*function_toup(void *str)
 {
 	size_t	i;
-	char	*s;
+	unsigned char	*s;
 
 	s = str;
 	i = 0;
@@ -40,7 +40,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*lstcpy;
 	t_list	*firstcpy;
-	void	*afterf;
 
 	if (!lst)
 		return (0);
@@ -49,12 +48,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	firstcpy = 0;
 	while (lst)
 	{
-		afterf = f(lst->content);
-		lstcpy = ft_lstnew(afterf);
-		if (!lstcpy && del)
+		lstcpy = ft_lstnew(f(lst->content));
+		if (!lstcpy)
 		{
-			del(afterf);
-			ft_lstclear(&firstcpy, del);
+			if (del)
+			{
+				del(lstcpy->content);
+				ft_lstclear(&firstcpy, del);
+			}
 			return (0);
 		}
 		ft_lstadd_back(&firstcpy, lstcpy);
@@ -69,29 +70,26 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*no1;
 	t_list	*no2;
 	t_list	*no3;
-	t_list	*no4;
 	t_list	*lstcpy;
 
-	lstcpy = 0;
 	no1 = ft_lstnew(ft_strdup("uno"));
 	no2 = ft_lstnew(ft_strdup("dos"));
 	no3 = ft_lstnew(ft_strdup("tres"));
-	no4 = ft_lstnew(ft_strdup("cuatro"));
 	no1->next = no2;
 	no2->next = no3;
-	no3->next = no4;
-	no4->next = 0;
-	printf("antes, lst original");
-	printf("%s\n", no1->content);
-	printf("%s\n", no2->content);
-	printf("%s\n", no3->content);
-	printf("%s\n", no4->content);
+	no3->next = 0;
+	printf("antes, lst original: ");
+	printf("%s ", (char *)no1->content);
+	printf("%s ", (char *)no2->content);
+	printf("%s\n", (char *)no3->content);
 	lstcpy = ft_lstmap(no1, function_toup, del);
-	printf("después, lst copia");
+	printf("después, lst copia: ");
 	while (lstcpy)
 	{
-		printf("%s\n", lstcpy->content);
+		printf("%s ", (char *)lstcpy->content);
 		lstcpy = lstcpy->next;
 	}
+	ft_lstclear(&no1, del);
+	ft_lstclear(&lstcpy, del);
 	return (0);
 }*/
