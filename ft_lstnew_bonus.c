@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 10:50:15 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/27 12:55:15 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:39:53 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ t_list	*ft_lstnew(void *content)
 	char	*content;
 	t_list	*node;
 
-	content = "hola";
+	content = ft_strdup("hola");
 	node = ft_lstnew(content);
 	printf("%s\n", node->content);
+	free(content);
+	free(node);
 	return (0);
 }*/
