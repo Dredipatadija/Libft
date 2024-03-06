@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 09:47:34 by arenilla          #+#    #+#             */
-/*   Updated: 2024/02/29 09:21:30 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/06 16:37:57 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*lstcpy;
 	t_list	*firstcpy;
+	void	*after_f;
 
 	if (!lst)
 		return (0);
@@ -48,14 +49,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	firstcpy = 0;
 	while (lst)
 	{
-		lstcpy = ft_lstnew(f(lst->content));
-		if (!lstcpy)
+		after_f = f(lst->content);
+		lstcpy = ft_lstnew(after_f);
+		if (!lstcpy && del)
 		{
-			if (del)
-			{
-				del(lstcpy->content);
-				ft_lstclear(&firstcpy, del);
-			}
+			del(after_f);
+			ft_lstclear(&firstcpy, del);
 			return (0);
 		}
 		ft_lstadd_back(&firstcpy, lstcpy);
