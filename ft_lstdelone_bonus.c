@@ -6,7 +6,7 @@
 /*   By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 12:49:37 by arenilla          #+#    #+#             */
-/*   Updated: 2024/03/05 14:57:09 by arenilla         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:02:35 by arenilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 /*int	main(void)
 {
 	t_list	*node;
-	t_list	**lst;
 	
 	node = ft_lstnew(ft_strdup("Hola"));
 	node->next = NULL;
-	lst = &node;
-	printf("contenido del nodo antes: %s\n", (char *)node->content);
-	ft_lstdelone(*lst, del);
-	printf("contenido después: %s\n", (char *)node->content);
-	if (*lst == NULL)
-		printf("éxito, nodo borrado");
+	printf("antes: %s\n", (char *)node->content);
+	ft_lstdelone(node, del);
+	printf("después: %s\n", (char *)node->content);
 	return (0);
 }*/
