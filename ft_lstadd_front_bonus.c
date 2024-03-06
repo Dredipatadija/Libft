@@ -34,12 +34,13 @@ int	main(void)
 	t_list	**lst;
 
 	node = ft_lstnew(ft_strdup("viejo nodo"));
+	node->next = NULL;
 	lst = &node;
 	new = ft_lstnew(ft_strdup("nuevo y primer nodo ya colocado"));
-	printf("antes, contenido 1º nodo: %s\n", node->content);
+	new->next = NULL;
+	printf("antes, contenido 1º nodo: %s\n", (char *)(*lst)->content);
 	ft_lstadd_front(lst, new);
-	printf("después, contenido 1º nodo: %s\n", node->content);
-	printf("después, contenido 2º nodo: %s\n", node->next->content);
+	printf("después, contenido 1º nodo: %s\n", (char *)(*lst)->content);
 	ft_lstclear(lst, del);
 	return (0);
 }*/

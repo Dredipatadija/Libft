@@ -44,9 +44,10 @@ int	main(void)
 	node1->next = node2;
 	node2->next = NULL;
 	new = ft_lstnew(ft_strdup("nuevo ultimo nodo, exito"));
-	printf("antes: %s\n", ft_lstlast(node1)->content);
+	new->next = NULL;
+	printf("antes: %s\n", (char *)ft_lstlast(node1)->content);
 	ft_lstadd_back(&node1, new);
-	printf("después: %s\n", ft_lstlast(node1)->content);
+	printf("después: %s\n", (char *)ft_lstlast(node1)->content);
 	ft_lstclear(&node1, del);
 	return (0);
 }*/
