@@ -6,7 +6,7 @@
 #    By: arenilla <arenilla@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 11:02:09 by arenilla          #+#    #+#              #
-#    Updated: 2024/04/11 20:46:54 by arenilla         ###   ########.fr        #
+#    Updated: 2024/04/15 13:10:16 by arenilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,7 @@ $(NAME): $(OBJECTS)
 		ar -crs $(NAME) $(OBJECTS)
 
 bonus: $(OBJECTS_BONUS)
-		ar -crs $(NAME) $(OBJECTS)
-
-#$(OBJECTS_BONUS): $(SOURCES_BONUS)
-#		$(CC) $(CFLAGS) -c $< -o $@
+		ar -crs $(NAME) $(OBJECTS_BONUS)
 
 clean:
 		rm -f $(OBJECTS) $(OBJECTS_BONUS)
